@@ -17,8 +17,16 @@
   Once you've implemented the logic, test your code by running
   - `npm run test-unique`
 */
+console.log(getUniqueElements([10, 20, 30, 10, 40, 20]));
 
 function getUniqueElements(arr) {
+  let resultArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (!resultArr.includes(arr[i])) {
+      resultArr.push(arr[i]);
+    }
+  }
+  return resultArr;
   // Your code here
 }
 
