@@ -24,12 +24,28 @@
   Once you've implemented the logic, test your code by running
   - `npm run test-countVowels`
 */
-
+console.log(countVowels("Hello World"));
 function countVowels(str) {
+  let res = 0;
   // Your code here
+  for (let i = 0; i < str.length; i++) {
+    console.log(str[i]);
+    if (
+      str[i] === "a" ||
+      str[i] === "e" ||
+      str[i] === "i" ||
+      str[i] === "o" ||
+      str[i] === "u" ||
+      str[i] === "A" ||
+      str[i] === "E" ||
+      str[i] === "I" ||
+      str[i] === "O" ||
+      str[i] === "U"
+    ) {
+      res += 1;
+    }
+  }
+  return res;
 }
 
 module.exports = { countVowels };
-
-
-
