@@ -16,13 +16,22 @@
 
   Once you've implemented the logic, test your code by running
   - `npm run test-occurrences`
-*/
-
+*/ console.log(countOccurrences([1, 2, 3, 1, 2, 1]));
 
 function countOccurrences(arr) {
+  let result = {};
+  for (let i = 0; i < arr.length; i++) {
+    let key = arr[i];
+    // console.log("el=", key);
+    if (result.hasOwnProperty(key)) {
+      result[key] += 1;
+    } else {
+      result[key] = 1;
+    }
+  }
+
+  return result;
   // Your code here
 }
 
-module.exports = countOccurrences;
-
-
+export default countOccurrences;

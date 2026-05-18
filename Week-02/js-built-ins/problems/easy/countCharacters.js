@@ -23,6 +23,7 @@ const countCharacters = (statement) => {
   let result = {};
   for (let i = 0; i < statement.length; i++) {
     let char = statement.charAt(i);
+
     if (result[char]) {
       result[char]++;
     } else {
@@ -32,4 +33,3 @@ const countCharacters = (statement) => {
   return result;
 };
 module.exports = countCharacters;
-
