@@ -16,7 +16,8 @@
 
   Once you've implemented the logic, test your code by running
   - `npm run test-occurrences`
-*/ console.log(countOccurrences([1, 2, 3, 1, 2, 1]));
+*/
+// console.log(countOccurrences([1, 2, 3, 1, 2, 1]));
 
 function countOccurrences(arr) {
   let result = {};
