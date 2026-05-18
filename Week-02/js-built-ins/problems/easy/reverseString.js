@@ -17,9 +17,16 @@
   Once you've implemented the logic, test your code by running
   - `npm run test-reverseString`
 */
-
+console.log("heyu");
+console.log(reverseString("Sumana"));
 function reverseString(str) {
-  // Your code here
+  let reversed = "";
+
+  for (let i = str.length - 1, j = 0; i >= 0; i--, j++) {
+    reversed.push(str[i]);
+    console.log(i, j, str[i], reversed[j]);
+  }
+  return reversed;
 }
 
 module.exports = reverseString;
