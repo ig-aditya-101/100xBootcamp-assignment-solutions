@@ -4,9 +4,9 @@
 
 // (Hint: setTimeout)
 let counter = 0;
-const updateCounter = () => {
-    for(let i)
+tick();
+function tick() {
   counter++;
   console.log(counter);
-};
-setTimeout(updateCounter, 1000);
+  setTimeout(tick, 1000);
+}
