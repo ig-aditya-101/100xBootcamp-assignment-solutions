@@ -11,3 +11,14 @@
 // Make the expensive operation more and more expensive and see how it affects the output.
 
 const fs = require("fs");
+const data =fs.readFile('example.txt','utf-8',(err, data) => {
+  if (err) {
+    console.error("Error reading file:", err);
+    return;
+  }
+  console.log("File content:", data);
+})
+
+for(let i=0;i<=1000000000000;i++){
+    
+}
