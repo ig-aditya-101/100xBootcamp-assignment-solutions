@@ -7,9 +7,21 @@
 // When the Promise resolves, the callback should be called with `(null, data)`.
 // When the Promise rejects, the callback should be called with the error.
 
+function promisifiedSetTimeout(delay) {
+  const promise1 = new Promise((res, rej) => {
+    setTimeout(() => {
+      return res();
+    }, delay);
+  });
+}
 
 function callbackify(fn) {
-
+  return function (...args) {
+    const callback = args.pop();
+    return fn(...args)
+      .then((data) => callback(null, data))
+      .catch((err) => callback(err));
+  };
 }
 
 module.exports = callbackify;
