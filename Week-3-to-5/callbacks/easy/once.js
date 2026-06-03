@@ -7,7 +7,17 @@
 // the callback with the same result (or error) from the first invocation.
 
 function once(fn) {
+  let called = false;
+  let cachedErr = null;
+  let cachedData = null;
 
+  return wrapperFunction (...args) {
+    const cb = args.pop();
+    if (!called) {
+      fn(...args);
+      cb();
+    }
+  };
 }
 
 module.exports = once;
